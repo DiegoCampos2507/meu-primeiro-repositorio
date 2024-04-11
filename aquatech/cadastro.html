@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aquatech | Cadastro</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="imagens/favicon2.ico">
+</head>
+
+<body>
+  <div class="header">
+    <div class="container">
+      <h1 class="titulo">AquaTech</h1>
+      <ul class="navbar">
+        <li>
+          <a href="index.html">Início</a>
+        </li>
+        <li>Simulador</li>
+        <li>|</li>
+        <li>
+          <a href="login.html">Login</a>
+        </li>
+        <li class="agora">
+          <a href="cadastro.html">Cadastro</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cadastro">
+    <div class="container">
+      <div class="card">
+        <h2>Bem vindo!</h2>
+        <div class="formulario">
+            <div class="campo">
+              <label>Nome:</label>
+              <input type="text" placeholder="Seu nome">
+            </div>
+            <div class="campo">
+              <label>E-mail:</label>
+              <input id="inp_email" type="text" placeholder="meuemail@provedor.com">
+            </div>
+            <div class="campo">
+              <label>Senha:</label>
+              <input id="inp_senha" type="password" placeholder="*****">
+            </div>
+            <div class="campo">
+              <label>Confirmação de Senha:</label>
+              <input id="inp_confirme" type="password" placeholder="*****">
+            </div>
+          <button onclick="verificar()">Cadastrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="container">
+      <p>Feito pelos alunos do 1CCO &hearts; SPTECH &copy;</p>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<script>
+  function verificar() {
+    var senha = inp_senha.value;
+    var confirme = inp_confirme.value;
+    var email = inp_email.value;
+    var arroba = email.indexOf("@");
+    var com = email.indexOf(".com");
+
+    if (senha != confirme) {
+      alert("Senha não confere")
+    } else if (arroba < 0 || com < 0) {
+      alert("Email inválido")
+    } else {
+      window.location.href="index.html"
+    }
+  }
+  
+</script>
