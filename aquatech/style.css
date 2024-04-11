@@ -65,16 +65,14 @@ body {
     justify-content: space-between;
 }
 
-.card {
-    width: 300px;
+.social .card {
+    width: 150px;
     text-align: center;
-    padding: 10px;
-    border: 2px solid black;
-    border-radius: 15px;
 }
 
 .card img {
     width: 100px;
+    align-self: center;
 }
 
 .card h4{
@@ -94,4 +92,56 @@ body {
 
 .footer .container p {
     font-weight: bold;
+}
+
+.login .container {
+    justify-content: center;
+    align-items: center;
+    background-image: url(imagens/bg-jelly-fish-para_outras_pags.png);
+    background-size: cover;
+    height: 75vh;
+}
+
+.login .card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    border: 2px solid #32b9cd;
+}
+
+.card h2 {
+    color: palevioletred;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.campo input {
+    width: 200px;
+    padding: 7px 15px;
+    border: 2px solid #32b9cd;
+}
+
+.formulario button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: palevioletred;
+    color: #fff;
+    border: none;
+}
+
+.header a {
+    text-decoration: none;
+    color: #e3b062;
+}
+
+.agora {
+    font-weight: 800;
 }
